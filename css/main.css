@@ -1,0 +1,1432 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --padding-section: 30px;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #ccc;
+}
+.container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: aqua; */
+}
+/* small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* ------------------------------------------------------------- */
+  .challenge1 .container{
+      background-color: #51509B;
+      border-radius: 10px;
+      padding: 40px 80px;
+  }
+  .challenge1 .container .heading {
+      color: white;
+      margin: 20px 0 60px 0;
+  }
+  .challenge1 .container .heading .head{
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+  }
+  .challenge1 .container .heading .head h3{
+      margin-right: 10px;
+      position: relative;
+  }
+  .challenge1 .container .heading .head i{
+      color: #FFC83D;
+      -webkit-text-stroke: 2px black;
+      
+  }
+  .challenge1 .container .heading p{
+      font-size: 15px;
+      line-height: 1.6;
+      margin-top: 10px;
+  }
+  .challenge1 .container .content {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+  }
+  .challenge1 .container .content .one ,
+  .challenge1 .container .content .two {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+  }
+  .challenge1 .container .content .one .head ,
+  .challenge1 .container .content .two .head {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+  }
+  .challenge1 .container .content .one .head h3 ,
+  .challenge1 .container .content .two .head h3 {
+      position: relative;
+      z-index: 1;
+  }
+  .challenge1 .container .content .one .head h3::after ,
+  .challenge1 .container .content .two .head h3::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 7px;
+    background-color: #FFEABE;
+    width: 100%;
+    z-index: -1;
+  }
+  .challenge1 .container .content .one .head i ,
+  .challenge1 .container .content .two .head i {
+      margin-right: 10px;
+      color: #FFC83D;
+  }
+  .challenge1 .container .content .one .paragraph ,
+  .challenge1 .container .content .two .paragraph {
+      margin: 20px 0;
+  }
+  .challenge1 .container .content .one .paragraph p ,
+  .challenge1 .container .content .two .paragraph p {
+      margin: 10px 0;
+      font-size: 15px;
+      color: #777;
+  }
+  .challenge1 .container .content .one .paragraph hr ,
+  .challenge1 .container .content .two .paragraph hr {
+   background-color: #eee;
+   border: none;
+   height: 1px;
+  }
+  .challenge1 .container .content .one .salary ,
+  .challenge1 .container .content .two .salary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .challenge1 .container .content .one .salary h3:first-of-type ,
+  .challenge1 .container .content .two .salary h3:first-of-type {
+    font-weight: bold;
+    font-size: 50px;
+    position: relative;
+  }
+  .challenge1 .container .content .one .salary h3:first-of-type::before ,
+  .challenge1 .container .content .two .salary h3:first-of-type::before {  
+    content: "$";
+    position: absolute;
+    font-size: 12px;
+    font-weight: normal;
+    left: -10px;
+    top: 0;
+  }
+  .challenge1 .container .content .one .salary h3:first-of-type::after ,
+  .challenge1 .container .content .two .salary h3:first-of-type::after {  
+    content: "USD";
+    position: absolute;
+    font-size: 12px;
+    font-weight: normal;
+    right: -20px;
+    bottom: 0;
+  }
+  .challenge1 .container .content .one .salary h3:last-of-type ,
+  .challenge1 .container .content .two .salary h3:last-of-type {
+      color: white;
+      background-color: #FFC83D;
+      padding: 10px;
+      border-radius: 10px;
+      margin-right: 50px;
+      font-size: 25px;
+  }
+  .challenge1 .container .content .one > p{
+    font-size: 15px;
+    margin-top: 20px;
+    color: #777;
+  }
+  .challenge1 .container .content .one {
+   flex: 1;
+  }
+  .challenge1 .container .content .two {
+   box-shadow: inset 20px 0px 20px -20px rgb(134, 133, 133);
+   flex-basis: 40%;
+  }
+  
+  @media(max-width:1199px){
+    .challenge1 .container .content .one .salary h3:last-of-type ,
+    .challenge1 .container .content .two .salary h3:last-of-type {
+        margin: 0;
+    }
+    .challenge1 .container .content .one .salary ,
+    .challenge1 .container .content .two .salary{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .challenge1 .container .content .one .head ,
+    .challenge1 .container .content .two .head {
+      font-size: 20px;
+  }
+  }
+  @media(max-width:767px){
+    .challenge1 .container .content .one,
+    .challenge1 .container .content .two{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        box-shadow: none;
+    }
+    .challenge1 .container{
+        padding: 40px;
+    }
+    .challenge1 .container .content .one .head ,
+    .challenge1 .container .content .two .head {
+      font-size: 18px;
+  }
+  .challenge1 .container .content .one .head h3::after ,
+  .challenge1 .container .content .two .head h3::after {
+      height: 5px;
+      bottom: 1px;
+  }
+  }
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+.challenge2{
+  background-color: #eee; 
+  padding-top: var(--padding-section); 
+  padding-bottom: var(--padding-section); 
+}
+.challenge2 .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.challenge2 .container .e , 
+.challenge2 .container .l {
+    width: 280px;
+    height: 400px;
+   
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);   
+    position: relative;
+   
+}
+.e-left{
+   grid-area: 1 / 1 / 6 / 2;
+   background-color: black;
+}
+.e1{
+    grid-area: 1 / 2 / 2 / 4;
+    background-color: black;
+}
+.e2{
+    grid-area: 3 / 2 / 4 / 4;
+    background-color: black;
+}
+.e3{
+    grid-area: 5 / 1 / 6 / 4;
+    background-color: black;
+}
+.l-left{
+    grid-area: 1 / 1 / 6 / 2;
+    background-color: black;
+}
+.l1{
+    grid-area: 5 / 1 / 6 / 4;
+    background-color: black;
+}
+.challenge2 .container .e::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: tomato;
+    right: 20px;
+    top: 0;
+    transform: translate(50%, 50%);
+    margin: 0 5px;
+    animation-name: e-animate;
+    animation-duration: 6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;   
+}
+@keyframes e-animate{
+    0% {
+        transform: translate(50%, 50%);
+    }
+   5%{
+        transform: translate(-190px , 50%);      
+    }
+    10%{
+        transform: translate(-190px , 180px);    
+    }
+    15%{
+        transform: translate( 20px , 180px);      
+    }
+    20%{
+        transform: translate(-190px , 180px);    
+    }
+    25%{
+        transform: translate(-190px , 340px);    
+    }
+    30%{
+        transform: translate(20px , 340px);    
+    }
+    35%{
+        transform: translate(-190px , 340px);    
+    }
+    40%{
+        transform: translate(-190px , 50%);    
+    }
+    50% , 100%{
+        transform: translate(50% , 50%);    
+    }
+}
+.challenge2 .container .l::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: tomato;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    /* margin: 0 5px; */
+    animation-name: l-animate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-direction: alternate; */
+    animation-delay: 3s;
+    opacity: 0;
+}
+@keyframes l-animate{
+    0% {
+       opacity: 0;       
+    }
+   20%{
+        opacity: 1;     
+    }
+    30%{
+        opacity: 1;   
+        transform: translate(-210px , -50%);
+    }
+    40%{
+        opacity: 1;   
+        transform: translate(-210px , -340px);
+    }
+    50% , 100%{
+        opacity: 0;
+        transform: translate(-210px , -340px);
+    }
+}
+@media(max-width:767px){
+    .challenge2 .container {
+        flex-direction: column;
+    }
+    .challenge2 .container .e{
+        margin-bottom: 10px;
+    }
+}
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+.challenge3{
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.challenge3 .container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+}
+.challenge3 .container .osama-mo{
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: white;
+}
+.challenge3 .container .Ahmed-sa{
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: white;
+}
+.challenge3 .container .shady-nabil{
+    grid-area: 1 / 4 / 4 / 5;
+    background-color: black;
+    color: white;
+}
+.challenge3 .container .mohamed-ibra{
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: white;
+}
+.challenge3 .container .mahmoud-mo{
+    grid-area: 2 / 2 / 3 / 4;
+    background-color: black;
+    color: white;
+}
+.challenge3 .container .ezz-eldin{
+    grid-area: 3 / 2 / 4 / 4;
+    background-color: white;
+}
+.challenge3 .container .mohamed-sayed{
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: white;
+}
+.challenge3 .container .ibrahim-sayed{
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: black;
+    color: white;
+}
+.challenge3 .container .gamal-sayed{
+    grid-area: 4 / 3 / 5 / 4;
+    background-color: white;
+}
+.challenge3 .container .eman-sayed{
+    grid-area: 4 / 4 / 5 / 5;
+    background-color: white;
+}
+.challenge3 .container > div{
+    padding: 20px;
+    border-bottom: 3px solid red;
+    position: relative;
+}
+.challenge3 .container > div h3:first-of-type{
+    font-size: 30px;
+}
+.challenge3 .container > div p:first-of-type{
+    font-size: 20px;
+    color: #777;
+}
+.challenge3 .container > div h3:last-of-type{
+    margin: 20px 0;
+    font-size: 20px;
+}
+.challenge3 .container > div p:last-of-type{
+    font-size: 18px;
+}
+.challenge3 .container > div::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    background-color: #777;
+    right: 18px;
+    bottom: 10px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(10deg);
+}
+.challenge3 .container > div::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    background-color: #777;
+    right: 25px;
+    bottom: 10px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(10deg);
+}
+@media(max-width:767px){
+    .challenge3 .container{
+      display: flex;
+      flex-wrap: wrap; 
+      padding: 10px;
+    }
+   
+   
+}
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+.challenge4{
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    background-color: #eee;
+   
+}
+.challenge4 .container{
+    border: 1px solid black;
+    padding: 30px;
+}
+.challenge4 .container .head{
+    border-radius: 10px;
+    background-image: url("../images/jessica-rockowitz-_U_M_S-G5zE-unsplash.jpg");
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+.challenge4 .container .head::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 68, 0, 0.5);
+    border-radius: 10px;
+}
+.challenge4 .container .headtwo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.challenge4 .container .headtwo > div{
+    flex-basis: 45%;
+    padding: 30px;
+
+}
+.challenge4 .container .headtwo .resposive{
+    background-color: #122333;
+    color: white;
+    padding: 40px 30px;
+    margin-top: -129px;
+    z-index: 1
+}
+.challenge4 .container .headtwo .resposive hr{
+    width: 20%;
+    border: none;
+    background-color: orangered;
+    height: 3px;
+    margin: 20px 0;
+}
+.challenge4 .container .headtwo .resposive h3{
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+.challenge4 .container .headtwo .resposive > div ,
+.challenge4 .container .headtwo .p{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    font-size: 20px;
+   
+}
+.challenge4 .container .headtwo .resposive > div i{
+    margin-right: 20px;
+    color: green;
+}
+.challenge4 .container .headtwo .resposive h4{
+    padding: 20px;
+    background-color: orangered;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    border-radius: 10px;
+}
+.challenge4 .container .headtwo .p{
+    border: 2px solid orangered;
+    height: fit-content;
+    font-size: 20px;
+}
+@media(max-width:767px){
+    .challenge4 .container .headtwo .resposive ,
+    .challenge4 .container .headtwo .p {
+        flex-basis: 90%;
+    }
+}
+
+.challenge4 .container .compare{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.challenge4 .container .compare .box{
+    background-color: #ccc;
+    padding: 20px;
+    flex-basis: 30%;
+}
+@media(max-width: 991px){
+    
+    .challenge4 .container .compare .box{
+        flex-basis: 48%;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 767px){
+    .challenge4 .container .compare{
+        flex-direction: column;
+    }
+    .challenge4 .container .compare .box{
+        flex-basis: 90%;
+        margin-bottom: 20px;
+    }
+}
+.challenge4 .container .compare .box h3:first-of-type{
+    font-size: 25px;
+    color: orangered;
+}
+.challenge4 .container .compare .box h3:last-of-type{
+    font-size: 25px;
+    margin: 20px 0;
+}
+.challenge4 .container .compare .box p:first-of-type{
+    line-height: 2;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.challenge4 .container .compare .box p:last-of-type{
+    color: orangered;
+    font-size: 20px;
+}
+.challenge4 .container .foot{
+    background-image: url("../images/nick-iliasov-i0fCUofGjV8-unsplash.jpg");
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+}
+.challenge4 .container .foot::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #122333ab;
+}
+.challenge4 .container .foot .article ,
+.challenge4 .container .foot img {
+    flex-basis: 45%;
+    position: relative;
+}
+@media(max-width:767px){
+    .challenge4 .container .foot{
+        flex-direction: column;
+    }
+    .challenge4 .container .foot .article ,
+    .challenge4 .container .foot img {
+    flex-basis: 90%;
+    }
+}
+.challenge4 .container .foot .article{
+    color: white;
+}
+.challenge4 .container .foot .article h3:first-of-type{
+    font-size: 30px;
+}
+.challenge4 .container .foot .article hr{
+    width: 20%;
+    border: none;
+    background-color: orangered;
+    height: 3px;
+    margin: 20px 0;
+}
+.challenge4 .container .foot .article p{
+    line-height: 1.8;
+    font-size: 20px;
+}
+.challenge4 .container .foot .article h3:last-of-type{
+    margin: 20px 0;
+    background-color: orangered;
+    font-size: 25px;
+    width: fit-content;
+    padding: 20px;
+}
+.challenge4 .container .foot img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+@media(max-width:767px){
+    .challenge4{
+        overflow: hidden;
+    }
+}
+/* ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+.challenge5{
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.challenge5 .container{
+    padding: 20px;
+    border: 1px solid black;
+}
+.challenge5 .container form{
+    background-color: white;
+    padding: 20px;
+}
+.challenge5 .container form h3{
+    font-size: 25px;
+    /* background-color: teal; */
+    /* width: fit-content; */
+    color: white;
+    /* padding: 10px 20px; */
+    position: relative;
+    z-index: 1;
+}
+.challenge5 .container form h3::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: teal;
+    top: 50%;
+    left: 39px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.challenge5 .container form h3::after{
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    left: -36px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #016a6a #016a6a transparent transparent;
+    z-index: -1;
+}
+.challenge5 .container form input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+.challenge5 .container form > div{
+    background-color: #eee;
+    margin: 20px 0 ;
+    padding: 20px;
+}
+.challenge5 .container form > div label{
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+    margin-left: 30px;
+    position: relative;
+}
+.challenge5 .container form > div label::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid teal;
+    border-radius: 3px;
+    top: 50%;
+    left: -25px;
+    transform: translate(-50%, -50%);
+}
+.challenge5 .container form > div label::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: teal;
+    border: 1px solid teal;
+    border-radius: 3px;
+    top: 50%;
+    left: -25px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.challenge5 .container form > div input[type="checkbox"]:checked + label::after{
+    display: block;
+}
+.challenge5 .container form > div input[type="checkbox"]:not(:checked):hover + label::after{
+    display: block;
+    opacity: .3;
+}
+.challenge5 .container form > div input[type="checkbox"]:checked +label{
+    text-decoration: line-through;
+}
+@media(max-width:767px){
+    .challenge5 .container form > div{
+        display: flex;
+    }
+}
+/* ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+.challenge6{
+    background-color: #eee;
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.challenge6 .container{
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.challenge6 .container .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    width: fit-content;
+    color: white;
+    font-size: 15px;
+    padding: 100px 5px;
+    margin-left: 10px;
+}
+.challenge6 .container .sidebar i{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.challenge6 .container .sidebar i:nth-of-type(2){
+    background-color: #326af8;
+}
+.challenge6 .container .tradix{
+    flex: 1;
+    padding: 0 10px;
+}
+.challenge6 .container .tradix .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    padding: 10px 20px;
+}
+.challenge6 .container .tradix .header .logo{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: blue;
+}
+.challenge6 .container .tradix .header .logo i{
+    margin-right: 10px;
+}
+.challenge6 .container .tradix .header .right{
+    display: flex;
+    align-items: center;
+}
+.challenge6 .container .tradix .header .right .salary{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+.challenge6 .container .tradix .header .right .salary p:first-of-type{
+    color: blue;
+    background-color: #eee; 
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 10px 20px;
+}
+.challenge6 .container .tradix .header .right .salary p:last-of-type{
+    color: #777;
+    border: 1px solid #eee;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 20px;
+}
+.challenge6 .container .tradix .header .right > div ,
+.challenge6 .container .tradix .header .right > i 
+{
+    padding: 0 10px;
+    font-size: 15px;
+}
+.challenge6 .container .tradix .header .right > i:first-of-type{
+    font-size: 35px;
+    color: blue;
+}
+.challenge6 .container .tradix .header .right > h3{
+    color: #777;
+    padding: 0 10px;
+}
+.challenge6 .container .tradix .header .right > i:last-of-type{
+    color: #777;
+    padding: 0 10px;
+}
+@media(max-width:767px){
+    .challenge6 .container .tradix{
+        padding: 0 10px;
+    }
+    .challenge6 .container .tradix .header{
+        /* flex-direction: column; */
+        padding: 0;
+    }
+    .challenge6 .container .tradix .header .right{
+        flex-direction: column;
+    }
+}
+.challenge6 .container .tradix > h3{
+    margin: 20px;
+color: blue;
+}
+.challenge6 .container .tradix > h3 span{
+    color: #777;
+}
+.challenge6 .container .tradix .content{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.challenge6 .container .tradix .content .sell-buy , 
+.challenge6 .container .tradix .content .seller{
+    /* background-color: burlywood; */
+    padding: 20px;
+   
+}
+.challenge6 .container .tradix .content .sell-buy{
+    flex-basis: 40%;
+}
+.challenge6 .container .tradix .content .sell-buy .button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.challenge6 .container .tradix .content .sell-buy button{
+    padding: 10px 70px;  
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.challenge6 .container .tradix .content .sell-buy .button button:first-of-type{
+    background-color: blue;
+    color: white;
+}
+.challenge6 .container .tradix .content .sell-buy .button button:last-of-type{
+    border: 1px solid #eee;
+    color: blue;
+    background-color: white;
+}
+.challenge6 .container .tradix .content .sell-buy form > div{
+    margin: 20px 0;
+}
+.challenge6 .container .tradix .content .sell-buy form > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F6FE;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.challenge6 .container .tradix .content .sell-buy form > div > div select{
+    flex-basis: 50%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.challenge6 .container .tradix .content .sell-buy form > div > div p{
+    flex-basis: 40%;
+}
+.challenge6 .container .tradix .content .sell-buy form > div:nth-of-type(4){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.challenge6 .container .tradix .content .sell-buy form > div:nth-of-type(5){
+    display: flex;
+}
+.challenge6 .container .tradix .content .sell-buy form > div:nth-of-type(5) input[type="submit"]{
+    flex: 1;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.challenge6 .container .tradix .content .sell-buy > p{
+    margin-top: 60px;
+    color:#92b0fd;
+    font-size: 15px;
+}
+.challenge6 .container .tradix .content .seller{
+    flex-basis: 55%;
+}
+.challenge6 .container .tradix .content .seller .heading{
+    display: flex;
+    justify-content: space-between;
+}
+.challenge6 .container .tradix .content .seller .heading .left ,
+.challenge6 .container .tradix .content .seller .heading .right{
+    display: flex;
+    font-size: 15px;
+}
+.challenge6 .container .tradix .content .seller .heading .left img {
+    margin-right: 20px;
+}
+.challenge6 .container .tradix .content .seller .heading .left img ,
+.challenge6 .container .tradix .content .seller .heading .right img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.challenge6 .container .tradix .content .seller .heading .right img{
+    margin-left: 20px;
+}
+.challenge6 .container .tradix .content .seller .heading .right > div{
+    direction: rtl;
+}
+.challenge6 .container .tradix .content .seller .heading .right > div p:last-of-type ,
+.challenge6 .container .tradix .content .seller .heading .left > div p:last-of-type{
+    color: blue;
+}
+.challenge6 .container .tradix .content .seller .box > div{
+     display: flex;
+     justify-content: space-between;
+    align-items: center;
+    background-color: #F2F6FE;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+.challenge6 .container .tradix .content .seller .box > div p:first-of-type{
+    flex-basis: 35%;
+}
+.challenge6 .container .tradix .content .seller .box > div p:last-of-type{
+    flex:1
+}
+@media(max-width:991px){
+    .challenge6 .container .tradix .content{
+        flex-direction: column;
+    }
+}
+@media(max-width:767px){
+    .challenge6 .container .tradix .content .sell-buy{
+        flex-basis: 90%;
+        padding: 20px 20px 20px 10px;
+    }
+    .challenge6 .container .tradix .content .seller{
+        flex-basis: 90%;
+        padding: 0;
+    }
+    
+    .challenge6 .container .tradix .content .sell-buy button{
+        padding: 10px 40px;
+    }
+    .challenge6 .container .tradix .content .sell-buy form > div > div{
+        padding: 10px 0;
+    }
+    .challenge6 .container .tradix .content .seller .heading{
+        flex-direction: column;
+    }
+    .challenge6 .container .tradix .content .seller .heading .right{
+        align-items: center;
+        justify-content: center;
+    }
+    .challenge6 .container .tradix .content .seller .heading .left{
+        align-items: center;
+        justify-content: center;
+    }
+    .challenge6 .container .tradix .content .seller .heading .left img ,
+    .challenge6 .container .tradix .content .seller .heading .right img{
+         margin-bottom: 20px;
+    }
+    .challenge6 .container .tradix .header .right .salary p:first-of-type ,
+    .challenge6 .container .tradix .header .right .salary p:last-of-type {
+        padding: 2px;
+    }
+    .challenge6 .container .tradix .header .right > i:first-of-type{
+        font-size: 20px;
+    }
+    .challenge6 .container .tradix .header .logo i {
+        margin-right: 4px;
+    }
+}
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+.challenge7{
+    background-color: #ccc; 
+    padding-top: var(--padding-section); 
+    padding-bottom: var(--padding-section); 
+  }
+  .challenge7 .container .paper{
+      width: 50%;
+      margin: auto;
+      background-color: white;
+      border-radius: 10px;
+  }
+  .challenge7 .container .paper .header{
+      background-image: url("../images/xps-kLfkVa_4aXM-unsplash.jpg");
+      background-size: cover;
+      height: 300px;
+      max-height: 100vh;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: relative;
+  }
+  .challenge7 .container .paper .header img{
+      max-width: 100%;
+      width: 80px;
+      border-radius: 50%;
+      position: absolute;
+      right: 40px;
+      bottom: -40px;
+      box-shadow: 0 5px 10px #777;
+  }
+  .challenge7 .container .paper .content{
+      padding: 30px;
+  }
+  .challenge7 .container .paper .content h2{
+      font-size: 30px;
+  }
+  .challenge7 .container .paper .content p{
+      margin: 20px 0;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.6;
+  }
+  .challenge7 .container .paper .content p span:first-of-type ,
+  .challenge7 .container .paper .content p span:last-of-type{
+      color: teal;
+  }
+  .challenge7 .container .paper .content .progress{
+      height: 30px;
+      background-color: #eee;
+      position: relative;
+  }
+  .challenge7 .container .paper .content .progress::after{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 60%;
+      left: 0;
+      top: 0;
+      background-color: teal;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+  .challenge7 .container .paper .content .footer{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+  }
+  .challenge7 .container .paper .content .footer > div > h3{
+      font-size: 30px;
+  }
+  .challenge7 .container .paper .content .footer > div > p{
+      margin: 0;
+      color: #777;
+  }
+  @media(max-width:991px){
+    .challenge7 .container .paper{
+        width: 90%;
+    }
+    .challenge7 .container .paper .content .footer > div > h3{
+        font-size: 25px;
+    }
+    .challenge7 .container .paper .content .footer > div > p{
+        font-size: 15px;
+        letter-spacing: -1px;
+    }
+  }
+  /* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+.challenge8{
+    background-color: #eee; 
+    padding-top: var(--padding-section); 
+    padding-bottom: var(--padding-section); 
+  }
+  .challenge8 .container .sign{
+      width: 50%;
+      background-color: blue;
+      margin: auto;
+      border-radius: 10px;
+      padding: 30px ;
+  }
+  .challenge8 .container .sign form{
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;  
+    padding: 20px 40px;
+  }
+  .challenge8 .container .sign form > h1{
+    text-align: center;
+    margin: 0;
+  }
+  .challenge8 .container .sign form > div:not(:last-of-type){
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      color: #777;
+  }
+  .challenge8 .container .sign form > div:not(:last-of-type) i{
+      margin-right: 10px;
+      font-size: 12px;
+  }
+  .challenge8 .container .sign form > div input[type="text"] ,
+  .challenge8 .container .sign form > div input[type="password"] ,
+  .challenge8 .container .sign form > div input[type="email"]{
+      border: none;
+      outline: none;
+  }
+  .challenge8 .container .sign form > input[type="submit"]{
+      width: 100%;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 20px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+  }
+  .challenge8 .container .sign form > p {
+    color: #777;
+    text-align: center;
+    border-bottom: 1px dashed #eee;
+    padding: 30px;
+  }
+  .challenge8 .container .sign form > p a {
+      text-decoration: none;
+    color: blue;
+  }
+  .challenge8 .container .sign form > div:last-of-type{
+      text-align: center;
+      margin: 20px 0;
+  }
+  .challenge8 .container .sign form > div:last-of-type .icon{
+     
+  }
+  .challenge8 .container .sign form > div:last-of-type .icon i{
+    color: white;
+    padding: 10px;
+  
+    margin: 10px 5px;
+    border-radius: 50%;
+    font-weight: normal;
+    font-size: 10px;
+    height: 30px;
+    width: 30px;
+    /* display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */ 
+  }
+  .challenge8 .container .sign form > div:last-of-type .icon > i:first-of-type{
+      background-color: blue;
+     
+  }
+  .challenge8 .container .sign form > div:last-of-type .icon > i:nth-of-type(2){
+    background-color: cyan;
+}
+.challenge8 .container .sign form > div:last-of-type .icon > i:last-of-type{
+    background-color: red;
+}
+@media(max-width:991px){
+    .challenge8 .container .sign{
+        width: 90%;
+    }
+    .challenge8 .container .sign form{
+        padding: 20px;
+    }
+}
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+.challenge9{
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);  
+}
+.challenge9 .container{
+    background-color: white;
+}
+.challenge9 .container .heading{
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+.challenge9 .container .heading h3{
+font-size: 30px;
+}
+.challenge9 .container .heading p{
+    margin: 20px 0;
+    color: #777;
+    line-height: 1.6;
+  word-spacing: -1px;
+}
+.challenge9 .container .content{
+    margin: 20px 0;
+}
+.challenge9 .container .content .origin{
+    background-image: url(../images/jessica-rockowitz-_U_M_S-G5zE-unsplash.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.challenge9 .container .content .origin::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    left: 0;
+    border-radius: 50%;
+}
+.challenge9 .container .content .origin .text-origin{
+    /* flex-basis: 60%; */
+    width: 400px;
+    position: relative;
+}
+.challenge9 .container .content .origin .text-origin h3{
+    color: white;
+    font-size: 23px;
+}
+.challenge9 .container .content .origin .text-origin p {
+    color: #9d9c9c;
+    font-size: 15px;
+    margin: 20px 0;
+   line-height: 1.4;
+}
+.challenge9 .container .content .origin .section{
+    position: absolute;  
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.challenge9 .container .content .origin .section img{
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid white;
+}
+.sec-textleft{
+    text-align: left;
+    margin-left: 20px;
+}
+.sec-textright{
+    text-align: left;
+    margin-right: 20px;
+}
+.sec-h3{
+    font-size: 20px;
+}
+.sec-h3 + p {
+    color: #9d9c9c;
+    font-size: 15px;
+    margin: 20px 0;
+   line-height: 1.4;
+}
+.challenge9 .container .content .origin div:nth-of-type(2){
+    top: 30px;
+    right: -190px;
+}
+.challenge9 .container .content .origin div:nth-of-type(3){
+    top: 30px;
+    left: -190px;
+}
+.challenge9 .container .content .origin div:nth-of-type(4){
+    bottom: 30px;
+    right: -190px;
+}
+.challenge9 .container .content .origin div:nth-of-type(5){
+    bottom: 30px;
+    left: -190px;
+}
+
+
+
+
+@media(max-width:991px){
+    .sec-textleft{
+        margin: 0;
+    }
+    .sec-textright{
+        margin: 0;
+    }
+    .challenge9 .container .content .origin .section img{
+        width: 50px;
+        height: 50px;
+        border: 5px solid white;
+    }
+    .sec-h3{
+        font-size: 16px;
+    }
+    .sec-h3 + p{
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    .challenge9 .container .content .origin .section{
+        width: 200px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(2){
+        top: 30px;
+        right: -100px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(3){
+        top: 30px;
+        left: -100px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(4){
+        bottom: 30px;
+        right: -100px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(5){
+        bottom: 30px;
+        left: -100px;
+    }
+}
+
+
+
+
+
+@media(max-width:767px){
+    .challenge9 .container .content {
+        margin: 40px 0 20px 0;
+    }
+    .challenge9 .container .content .origin{
+        width: 300px;
+        height: 300px;
+    }
+    .challenge9 .container .content .origin .text-origin{
+        width: 200px;
+    }
+    .challenge9 .container .content .origin .text-origin h3{
+        font-size: 15px;
+    }
+    .challenge9 .container .content .origin .text-origin p{
+        font-size: 10px;
+        margin: 10px 0;
+    }
+    .challenge9 .container .content .origin .section img{
+        width: 40px;
+        height: 40px;
+        border: 5px solid white;
+    }
+    .sec-h3{
+        font-size: 13px;
+    }
+    .sec-h3 + p{
+        font-size: 10px;
+        margin: 5px 0;
+    }
+    .challenge9 .container .content .origin .section{
+        width: 100px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(2){
+        top: -25px;
+        right: -30px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(3){
+        top: -25px;
+        left: -30px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(4){
+        bottom: -25px;
+        right: -30px;
+    }
+    .challenge9 .container .content .origin div:nth-of-type(5){
+        bottom: -25px;
+        left: -30px;
+    }
+}
